@@ -34,15 +34,15 @@ const listElements = [
 
 function App() {
   return (
-    <div className="flex justify-center items-center min-h-screen font-hanken bg-[#ecf2ff]">
-      <div className="flex w-[80vh] h-[55vh] bg-white rounded-3xl">
+    <div className="flex justify-center items-center min-h-screen font-hanken bg-[#ecf2ff] p-4">
+      <div className="flex flex-col lg:flex-row w-full max-w-2xl bg-white rounded-3xl  shadow-md">
         {/* Sol (mavi) kutu */}
         <div
           style={{
             background:
               "linear-gradient(to bottom, hsl(252,100%,67%), hsl(241,81%,54%))",
           }}
-          className="flex-1/2 flex flex-col px-10 items-center gap-4 p-8 rounded-3xl"
+          className="flex-1 flex flex-col items-center gap-4 p-6 lg:p-10 text-center rounded-3xl"
         >
           <h1 className="text-[hsl(241,100%,89%)] text-xl">Your Result</h1>
           <div
@@ -50,12 +50,14 @@ function App() {
               background:
                 "linear-gradient(to bottom, hsla(256,72%,46%,1), hsla(241,72%,46%,0))",
             }}
-            className="flex flex-col items-center justify-center px-12 py-10 rounded-full"
+            className="flex flex-col  items-center justify-center w-28 h-28 lg:w-40 lg:h-40 rounded-full"
           >
-            <span className="text-5xl text-white font-bold">76</span>
+            <span className="text-4xl lg:text-5xl text-white font-bold">
+              76
+            </span>
             <span className="text-sm text-[hsl(241,100%,89%)]">of 100</span>
           </div>
-          <div className="flex flex-col items-center justify-center text-center gap-2">
+          <div className="flex flex-col items-center justify-center text-center gap-2 px-6">
             <h1 className="text-white font-bold text-2xl mt-2">Great</h1>
             <p className="text-[hsl(241,100%,89%)] text-sm">
               You scored higher than 65% of the people who have taken these
@@ -65,10 +67,11 @@ function App() {
         </div>
 
         {/* Sağ (beyaz) kutu */}
-        <div className="flex-1/2 flex flex-col h-auto bg-white gap-3 p-8 rounded-r-3xl">
+        <div className="flex-1 flex flex-col gap-3 p-6 lg:p-8 bg-white">
           <h1 className="font-bold text-[#303b59] text-lg">Summary</h1>
           {listElements.map((item, index) => (
             <Lists
+              key={index}
               name={item.name}
               score={item.score}
               emo={item.emo}
@@ -76,7 +79,7 @@ function App() {
               colors={item.colors}
             />
           ))}
-          <button className="bg-[#303b59] text-sm rounded-3xl transition duration-300  px-1 py-3 mt-3  text-white hover:bg-[hsl(241,81%,54%)]  hover:cursor-pointer">
+          <button className="bg-[#303b59] text-sm rounded-3xl transition duration-300 px-4 py-3 mt-5 text-white hover:bg-[hsl(241,81%,54%)]">
             Continue
           </button>
         </div>
