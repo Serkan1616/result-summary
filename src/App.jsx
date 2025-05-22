@@ -5,32 +5,33 @@ const listElements = [
   {
     name: "Reaction",
     score: "80",
-    emo: { img: "/src/assets/icon-reaction.svg" },
+    emo: { img: "/icon-reaction.svg" },
     colorp: "#e7a5a2",
     colors: "#fff6f7",
   },
   {
     name: "Memory",
     score: "92",
-    emo: { img: "/src/assets/icon-memory.svg" },
+    emo: { img: "/icon-memory.svg" },
     colorp: "#f1ce83",
     colors: "#fffaf4",
   },
   {
     name: "Verbal",
     score: "61",
-    emo: { img: "/src/assets/icon-verbal.svg" },
+    emo: { img: "/icon-verbal.svg" },
     colorp: "#56c0a8",
     colors: "#f2fdf9",
   },
   {
     name: "Visual",
     score: "73",
-    emo: { img: "/src/assets/icon-visual.svg" },
+    emo: { img: "/icon-visual.svg" },
     colorp: "#5f65bb",
     colors: "#f4f4fe",
   },
 ];
+
 function App() {
   return (
     <div className="flex justify-center items-center min-h-screen font-hanken bg-[#ecf2ff]">
